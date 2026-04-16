@@ -1,0 +1,72 @@
+# -----------------------------
+# General Configuration
+# -----------------------------
+seed: 3007
+device: "cuda"          # "cpu" or "cuda"
+epochs: 400
+batch_size: 256
+val_split: 0.1
+test_split: 0.1
+patience: 10
+print_frequency: 50
+val_print_frequency: 5
+
+# -----------------------------
+# Preprocessing settings
+# -----------------------------
+sim_len: 15                 # ❗ MUST BE 15 for dataset
+log_transform: true         # log10(Ntot), log10(CMD_nm); GSD stays linear
+
+# -----------------------------
+# Paths
+# -----------------------------
+data_csv: "DATASET/GROUPKFOLD_STRATIFIED/final_processed_15steps_all.csv"
+checkpoint_dir: "cpt_with_split_data"
+log_dir: "runs/moment_fsp_new"
+loss_history_csv: "loss_history.csv"
+split_dir: "./splits"
+
+# -----------------------------
+# Model Configuration
+# -----------------------------
+model:
+  type: "transformer"     # options: transformer, lstm, gru
+  hidden_dim: 128
+  num_layers: 4
+  dropout: 0.1
+  nhead: 8
+  #use_resnet: false
+  clamp_min: -30.0        # limits for log(N) & log(CMD)
+  clamp_max: 30.0
+
+# -----------------------------
+# Optimizer & Scheduler
+# -----------------------------
+optimizer:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+
+scheduler:
+  mode: "min"
+  factor: 0.5
+  patience: 5
+
+# -----------------------------
+# Loss Function Configuration
+# -----------------------------
+loss_fn:
+  mom_weight: 1.0
+  #bin_weight: 0
+  bin_weight: 0.0001
+  vtot_weight: 0.001
+  #bin_weight: 0.0001
+  #vtot_weight: 0
+
+  # ------------- Physics Training Strategy -------------
+  physics_warmup_epochs: 0  # set to >0 for model to learn moments first
+  timestep_subsample: 1       # physics every timestep
+
+  # ------------- Uncertainty Weighting (Kendall σ) -------------
+  use_uncertainty: false
+  debug: true
+
