@@ -83,7 +83,7 @@ model.eval()
 streamlit run app_streamlit.py
 ```
 
-
+link: https://coast-ar-zpykrjjgdpa2dyeftjqux2.streamlit.app/
 
 
 ---
