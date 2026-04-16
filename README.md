@@ -51,6 +51,8 @@ Create and activate the conda environment:
 
 ```bash
 conda env create -f environment.yml
+or
+pip install -r requirements.txt
 conda activate coast-ar
 ```
 
@@ -64,18 +66,6 @@ python train.py --config config.yaml
 
 ---
 
-## 🧪 Inference
-
-```python
-from model_moment import ModelClass
-import torch
-
-model = ModelClass(...)
-model.load_state_dict(torch.load("path_to_checkpoint.pt"))
-model.eval()
-```
-
----
 
 ## 💻 Streamlit App
 
@@ -100,6 +90,7 @@ COAST-AR/
 ├── fsp_c.py
 ├── config.yaml
 ├── environment.yml
+├── requirements.txt
 ├── app_streamlit.py
 ├── DATASET/
 ├── cpt_with_split_data/
@@ -108,11 +99,11 @@ COAST-AR/
 
 ---
 
-## 📄 Citation
+## 📄 Citation (TODO)
 
 ```
 @article{coast_ar,
-  title={COAST-AR: An Autoregressive Transformer Framework for Sequential Prediction of Aerosol Moment Dynamics},
+  title={COAST-AR: A Physics-Constrained Autoregressive Transformer for Coagulation-Driven Aerosol Evolution},
   author={...},
   year={2026}
 }
