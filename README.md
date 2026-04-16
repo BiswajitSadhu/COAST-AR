@@ -27,10 +27,10 @@ The dataset used in this work is publicly available on Zenodo:
 
 1. Download the dataset from the Zenodo link above  
 2. Extract the contents  
-3. Place the dataset inside the repository as:
+3. Place the dataset inside the repository inside:
 
 ```
-COAST-AR/DATASET/
+COAST-AR/DATASET/GROUPKFOLD_STRATIFIED/
 ```
 
 4. Ensure the following structure:
