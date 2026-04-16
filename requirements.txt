@@ -1,0 +1,15 @@
+streamlit==1.50.0
+
+torch
+numpy
+scipy
+pandas
+pyyaml
+
+matplotlib
+scikit-learn
+
+numba
+
+tqdm
+joblib
