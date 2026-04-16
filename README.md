@@ -79,12 +79,7 @@ Presently deployed online at Streamlit Community Portal:
 
 
 
-
-file:///home/biswajit/Downloads/app_image_coastar.png
-
-
-
-
+<img width="1915" height="955" alt="Screenshot from 2026-04-16 12-56-22" src="https://github.com/user-attachments/assets/4f28e897-33dd-4ba5-9a0c-5ec9f7bd3d5b" />
 
 ---
 
