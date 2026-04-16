@@ -16,7 +16,6 @@ COAST-AR provides a data-driven surrogate model that:
 
 ---
 
-![Uploading COAST_AR_architecture (1).png…]()
 
 ## 🔗 Dataset (Zenodo)
 
@@ -60,6 +59,7 @@ conda activate coast-ar
 
 ## 🚀 Training
 
+
 ```bash
 python train.py --config config.yaml
 ```
@@ -72,8 +72,17 @@ python train.py --config config.yaml
 ```bash
 streamlit run app_streamlit.py
 ```
+Presently deployed online at Streamlit Community Portal:
 
-link: https://coast-ar-zpykrjjgdpa2dyeftjqux2.streamlit.app/
+**link: https://coast-ar-zpykrjjgdpa2dyeftjqux2.streamlit.app/**
+
+
+
+
+
+
+
+
 
 
 ---
