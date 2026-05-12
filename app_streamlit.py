@@ -11,8 +11,10 @@ import pandas as pd
 import base64
 
 st.set_page_config(layout="wide")
+
+
 # =============================================================
-# BACKGROUND
+# BACKGROUND (Optimized for Visibility)
 # =============================================================
 def set_background(image_path):
     with open(image_path, "rb") as f:
@@ -23,74 +25,89 @@ def set_background(image_path):
     .stApp {{
         background-image: url("data:image/png;base64,{encoded}");
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
     }}
+
+    /* Overlay to darken the background slightly for better text contrast */
     .stApp::before {{
         content: "";
         position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.4); 
         z-index: -1;
     }}
     </style>
     """, unsafe_allow_html=True)
 
+
+# Ensure the path matches your local file
 set_background("assets/coast_shifted_blended.png")
 
 # =============================================================
-# 🔥 GLOBAL FONT CONTROL (VERY IMPORTANT)
+# 🔥 UI & INPUT VISIBILITY CONTROL
 # =============================================================
 st.markdown("""
 <style>
-div[data-testid="stNumberInput"] input {
-    width: 100% !important;
-    }
-
-/* GLOBAL */
-html, body, [class*="css"] {
-    font-size: 32px !important;
-}
-
-/* HEADINGS */
-h1, h2, h3, h4 {
-    font-size: 24px !important;
-}
-
-/* NUMBER INPUT LABEL */
-div[data-testid="stNumberInput"] label {
-    font-size: 24px !important;
-    font-weight: 600 !important;
-}
-
-/* INPUT TEXT */
-div[data-testid="stNumberInput"] input {
-    font-size: 24px !important;
-    height: 50px !important;
-}
-
-/* BUTTON */
-div[data-testid="stButton"] button {
-    font-size: 24px !important;
-    font-weight: 600 !important;
-    padding: 12px 20px !important;
-    border-radius: 8px !important;
-}
-
-/* DATAFRAME */
-[data-testid="stDataFrame"] div {
-    font-size: 20px !important;
-}
-
-/* DOWNLOAD BUTTON */
-div[data-testid="stDownloadButton"] button {
-    font-size: 22px !important;
-}
-
-/* SPACING */
-div[data-testid="stNumberInput"] {
+/* 1. GLASSMORPHISM EFFECT FOR INPUTS */
+/* This creates a semi-transparent box behind inputs so they are readable */
+div[data-testid="stNumberInput"], 
+div[data-testid="stTextInput"], 
+div[data-testid="stSelectbox"],
+div[data-testid="stMultiSelect"] {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
+}
+
+/* 2. TEXT COLOR & FONT SIZES */
+/* Ensure all labels are bright white and bold */
+label p {
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* 3. INPUT BOX STYLING */
+div[data-testid="stNumberInput"] input {
+    font-size: 22px !important;
+    height: 55px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: #00FFCC !important; /* Neon cyan for high visibility */
+    border: 1px solid #444 !important;
+}
+
+/* 4. BUTTON STYLING */
+div[data-testid="stButton"] button {
+    width: 100%;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    background-color: #007BFF !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    border: none !important;
+    transition: 0.3s;
+}
+
+div[data-testid="stButton"] button:hover {
+    background-color: #00CCFF !important;
+    transform: scale(1.02);
+}
+
+/* 5. DATA FRAME VISIBILITY */
+[data-testid="stDataFrame"] {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 </style>
