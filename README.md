@@ -1,7 +1,10 @@
+
+
 <img width="1536" height="1024" alt="COAST_AR_architecture (1)" src="https://github.com/user-attachments/assets/e27b684c-f6c7-4781-bedb-6e52bafac8ef" /># 🌫️ COAST-AR  
 **Coagulation-Aware Sequential Transformer for Aerosol Moment Dynamics**
 
-COAST-AR is a physics-constrained causal autoregressive Transformer framework for predicting the temporal evolution of aerosol populations under coagulation-driven dynamics.
+COAST-AR is a physics-constrained causal autoregressiv[coast-ar (1).pdf](https://github.com/user-attachments/files/27705401/coast-ar.1.pdf)
+e Transformer framework for predicting the temporal evolution of aerosol populations under coagulation-driven dynamics.
 
 ---
 
