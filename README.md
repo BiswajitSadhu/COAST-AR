@@ -81,9 +81,7 @@ Presently deployed online at Streamlit Community Portal:
 **link: https://coast-ar-zpykrjjgdpa2dyeftjqux2.streamlit.app/**
 
 
-
-
-<img width="1915" height="955" alt="Screenshot from 2026-04-16 12-56-22" src="https://github.com/user-attachments/assets/4f28e897-33dd-4ba5-9a0c-5ec9f7bd3d5b" />
+<img width="953" height="1075" alt="coast-ar-streamlit (1)" src="https://github.com/user-attachments/assets/1b17787f-dc20-4512-bbad-2d4d8914c9ad" />
 
 ---
 
