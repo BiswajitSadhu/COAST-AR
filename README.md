@@ -25,7 +25,7 @@ COAST-AR provides a data-driven surrogate model that:
 
 The dataset used in this work is publicly available on Zenodo:
 
-👉 **10.5281/zenodo.18656856**
+👉 **[10.5281/zenodo.18656856](https://doi.org/10.5281/zenodo.18656855)**
 
 ### 📥 Steps to Use the Dataset
 
