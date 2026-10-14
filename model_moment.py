@@ -162,7 +162,7 @@ class MomentPredictor(nn.Module):
 
                 if use_teacher:
                     x_next[:, self.moment_start_idx:] = \
-                        x_scalar_norm[:, t + 1, self.moment_start_idx:]
+                        x_scalar_norm[:, t, self.moment_start_idx:] # corrected
                 else:
                     x_next[:, self.moment_start_idx:] = y_t.detach()
 
